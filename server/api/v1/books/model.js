@@ -8,8 +8,8 @@ const schema = new Schema({
     },
     description: String,
     author: {
-        type: String,
-        required: true
+        type: Schema.Types.ObjectId,
+        ref: 'author'
     }
 },{
     timestamps: true
