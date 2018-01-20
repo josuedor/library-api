@@ -1,5 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+const config = require("./../config")
+mongoose.connect(config.db.url);
+
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));

@@ -14,6 +14,8 @@ router.route('/')
     .get(controller.all)
     .post(controller.create)
     
+router.param('id', controller.findById)
+    
 router.route('/:id')
     .get(controller.get)
     .put(controller.update)
